@@ -3,5 +3,5 @@ import weex from 'weex-vue-render'
 
 weex.init(Vue)
 
-const App = require('../../src/components/CustomTopNav.vue');
+const App = require('..\\..\\src\\components\\CustomTopNav.vue');
 new Vue(Vue.util.extend({el: '#root'}, App));

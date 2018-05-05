@@ -6,7 +6,7 @@
                @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
     <!-- 第一个页面内容-->
     <div class="item-container" :style="contentStyle">
-      <Recommend/>
+      <Recommend :tabHeight="tabIconFontStyles.height" />
     </div>
     <!-- 第二个页面内容-->
     <div class="item-container" :style="contentStyle"><text>特别推荐</text></div>
@@ -29,7 +29,7 @@
 import { WxcTabBar, Utils, WxcMinibar } from 'weex-ui'
 import Recommend from './Recommend'
 export default {
-  components: { WxcTabBar, WxcMinibar, Recommend},
+  components: { WxcTabBar, WxcMinibar, Recommend },
   data: () => ({
 
     tabIconFontTitles: [
