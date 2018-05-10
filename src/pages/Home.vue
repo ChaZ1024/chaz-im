@@ -9,7 +9,9 @@
       <Recommend :tabHeight="tabIconFontStyles.height" />
     </div>
     <!-- 第二个页面内容-->
-    <div class="item-container" :style="contentStyle"><text>特别推荐</text></div>
+    <div class="item-container" :style="contentStyle">
+      <Found/>
+    </div>
 
     <!-- 第三个页面内容-->
     <div class="item-container" :style="contentStyle"><text>消息中心</text></div>
@@ -28,8 +30,9 @@
 <script>
 import { WxcTabBar, Utils, WxcMinibar } from 'weex-ui'
 import Recommend from './Recommend'
+import Found from './Found'
 export default {
-  components: { WxcTabBar, WxcMinibar, Recommend },
+  components: { WxcTabBar, WxcMinibar, Recommend ,Found},
   data: () => ({
 
     tabIconFontTitles: [
@@ -55,7 +58,7 @@ export default {
     tabIconFontStyles: {
       bgColor: '#FFFFFF',
       titleColor: '#666666',
-      activeTitleColor: 'red',
+      activeTitleColor: '#d4237a',
       activeBgColor: '#FFFFFF',
       isActiveTitleBold: true,
       width: 160,
@@ -66,7 +69,7 @@ export default {
       iconFontSize: 50,
       iconFontColor: '#333333',
       iconFontMarginBottom: 8,
-      activeIconFontColor: 'red',
+      activeIconFontColor: '#d4237a',
       iconFontUrl: '//at.alicdn.com/t/font_637484_dogt0puldviy66r.ttf'
     }
   }),
